@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Provider } from 'mobx-react'
 import { injectGlobal, ThemeProvider } from 'styled-components'
+import { hot } from 'react-hot-loader'
 
 import { Router } from 'react-router'
 import Routes from './router'
@@ -18,7 +19,7 @@ const theme = {
   color: '#ffa12f',
 }
 
-export default class App extends Component {
+class App extends Component {
   render() {
     return (
       <Provider {...stores}>
@@ -31,3 +32,5 @@ export default class App extends Component {
     )
   }
 }
+
+export default hot(module)(App)
