@@ -12,10 +12,6 @@ module.exports = {
     publicPath: '/'
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      title: 'React demo',
-      template: path.resolve(__dirname, '../template.html')
-    }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
     new NyanProgressPlugin(),
@@ -24,7 +20,7 @@ module.exports = {
     extensions: ['*', '.js', 'jsx']
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js|jsx$/,
         exclude: /node_modules/,
