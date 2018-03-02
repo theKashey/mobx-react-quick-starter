@@ -17,6 +17,11 @@ const TestElement = styled.div`
   height: 100px;
 `
 
+const Button = styled.button`
+  width: 100px;
+  height: 50px;
+`
+
 @inject(stores => ({
   count: stores.counter.count,
   increase: stores.counter.increase,
@@ -27,8 +32,8 @@ export default class Demo extends Component<Props> {
   render() {
     return (
       <Container>
-        <button onClick={this.props.increase}>+</button>
-        <button onClick={this.props.decrease}>-</button>
+        <Button onClick={this.props.increase}>+</Button>
+        <Button onClick={this.props.decrease}>-</Button>
         <div>{this.props.count}</div>
         <TestElement />
       </Container>
