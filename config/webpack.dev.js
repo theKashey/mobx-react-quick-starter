@@ -3,6 +3,8 @@ const merge = require('webpack-merge')
 const webpack = require('webpack')
 const config = require('config')
 
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 const baseConfig = require('./webpack.base')
 
 const HotMiddleWareConfig = 'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000'
